@@ -1,4 +1,7 @@
 {
+  "engines":{
+    "node":"21.7.3"
+  },
   "name": "myself",
   "version": "1.0.0",
   "description": "",
