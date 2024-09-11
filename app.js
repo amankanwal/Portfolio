@@ -7,7 +7,8 @@ const ejsMate = require("ejs-mate")
 const Myself = require("./models/myModel")
 //using model in our file 
 const Projectimages = require("./models/projectimages")
-
+const mongoose = require("mongoose")
+require('dotenv').config();
 // using middleware 
 app.engine('ejs' , ejsMate);
 app.use(express.static(path.join(__dirname, "public"))); 
@@ -22,8 +23,18 @@ app.listen( 8080, ()=>{
     console.log("listening ...........")
 });
 
+async function main() {
+    try {
+        await mongoose.connect(process.env.MONGODB_URL, {
+           
+        });
+        console.log("Connected to MongoDB successfully.");
+    } catch (err) {
+        console.error("Error connecting to MongoDB:", err);
+    }
+}
 
-
+main();
 
 app.get("/" ,async  (request , response )=> {
     const allProjects = await Myself.find({});

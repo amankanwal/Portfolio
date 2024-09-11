@@ -1,6 +1,6 @@
 {
-  "engines":{
-    "node":"21.7.3"
+  "engines": {
+    "node": "21.7.3"
   },
   "name": "myself",
   "version": "1.0.0",
@@ -12,6 +12,7 @@
   "author": "Aman",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
     "express": "^4.19.2",
