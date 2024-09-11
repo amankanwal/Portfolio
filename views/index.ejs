@@ -1,0 +1,99 @@
+<%- layout("./layout/boilerplate.ejs") %>
+    <body>
+        <div class="main-container">
+            
+            <div id="about-section" class="about ">
+                
+                <div class="profile-pictrue ">
+                    <a href="###"><img class="" src="/Images/153754975.png"  alt=""></a>
+                    <div></div>
+                    <div class="about-me">
+                        <h1 class="about-me-my-name">Aman Kanwal</h1>
+                        <p>Full Stack Web Developer <br> M E R N     </p>
+                        <div class="contact">
+                            <a target="_blank" href="https://www.linkedin.com/in/amankanwal/"><i class="fa-brands fa-linkedin"></i><i>amankanwal</i></a>
+                            <a href="#"><i class="fa-solid fa-envelope"></i><i>kanwlaman1212@gmai.com</i></a>
+                            <a href="#"><i class="fa-solid fa-phone"></i><i>+91 8439213173</i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div  class="my-intro border">
+               <!-- <h3>About Me</h3> -->
+                <p>introduction to Myself <br> i am Aman <br> BCA student from Kumaun University, Nainital, Uttarakhand. <br> I have a strong passion for web development and specialize in the MERN Stack. <br> Although I may not have formal industry experience yet, <br>I have diligently learned and mastered the technology stack through hands-on projects. <br></p>
+               
+            </div>
+            
+            <div  class="skill-container ">
+
+                <div>
+                    <h2 class="skill-section">Skills</h2>
+                </div>
+                <div id="skill-section" class="skill-list">
+                    <ul class="skill-list">
+                        <li class="skill"><i class="fa-brands fa-html5"></i></li>
+                        <li class="skill"><i class="fa-brands fa-css3-alt"></i></li>
+                        <li class="skill"><i class="fa-brands fa-react"></i></li>
+                        <li class="skill"><i class="fa-brands fa-js"></i></li>
+                        <li class="skill"><i class="fa-brands fa-node-js"></i></li>
+                        <li class="skill"><i class="fa-brands fa-vuejs"></i></li>
+                        <li class="skill"><i class="fa-brands fa-jsfiddle"></i></li>
+                        <li class="skill"><i class="fa-brands fa-bootstrap"></i></li>
+                    </ul>
+                </div>
+                
+                
+
+            </div>
+
+            <div class="project" >
+                <div class="project-title">
+                    <h2>Projects</h2>
+                </div>
+                <div class="project-card-container " >
+                    
+                    <% for(let index of allProjects){ %>
+                      
+                            
+                            <div id="project-section" class="project-card">
+                              
+                                <div class="project-image">
+                                    <img src="<%=index.projectImageUrl %>" alt="">  
+                                </div>
+
+                                <div class="project-title"> 
+                                    <a href="project/<%= index._id %>"><h2><%= index.projectName %></h2>
+                                        <p class="project-card-description"><%= index.projectDescription %></p>
+                                    </a>
+                                    
+
+                                    <p>  <b style="text-decoration: underline; color: goldenrod;">Tech Used</b>  <br> <%= index.projectTech %></p>
+
+                                </div>
+
+                               
+                            </div>
+
+                       
+                    <% } %>
+                  
+                    <div class=" upload-project-container">
+                        <div class="upload-projec">
+                            <a href="/upload"><i  class="fa-solid fa-arrow-up-from-bracket upload-new-project"></i> </a>
+                           <div>
+                            <p>Upload New Project</p>
+                           </div>
+                            
+                        </div>
+                       
+                    </div>
+
+                </div>
+              
+                    
+            </div>
+            
+        </div>
+        <script src="/js/main.js"></script>
+    </body>

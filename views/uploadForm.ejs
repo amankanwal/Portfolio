@@ -1,0 +1,37 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<body>
+    <div class="upload-form row ">
+    
+        <form action="/project" method="post">
+            <label class="form-label" for="title">Title Name </label>
+            <input class="form-control mb-2 " required   type="text" name="project[title]" placeholder="Title Name" id="title">
+    
+            <label class="form-label" for="owner">Owner Name </label>
+            <input class="form-control mb-2" required type="text" name="project[owner]" placeholder="Owner Name " id="owner">
+    
+            <div class="row project-image-description mb-2">
+
+                <div class="project-image col-4">
+                    <label class="form-label mb-2" for="description"><i  class="fa-solid fa-arrow-up-from-bracket upload-new-project project-image-icon"></i></label>
+                    <input class="form-control" type="text" name="project[image]" id="image" placeholder="Image Url ">
+                </div>
+               
+                <div class="col-8 mb-2">
+                    <label class="form-label mb-2"  for="description">Description</label>
+                    
+                    <textarea required  placeholder="Write Description there" class="form-control mb-2" name="project[description]" id="description"></textarea>
+                
+                    <label  class="form-label" for="tech">Technology Used</label>
+                    <input required class="form-control mb-2" type="text" name="project[tech]" placeholder="Tech Used " id="tech">
+                </div>
+                
+            </div>
+            
+    
+           
+    
+            <button class="primary-">Submit</button>
+        </form>
+    </div>
+    
+</body>

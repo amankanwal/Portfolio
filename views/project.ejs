@@ -1,0 +1,71 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<style>
+    .page{
+        display: flex   ;
+        height: 65vh;
+        /* border: 1px solid #fff; */
+        border-radius: 5px;
+        margin: 1rem; 
+        padding: 1rem; 
+        
+    }
+
+
+</style>
+
+<body >
+    <div>
+
+        <div class="page border">
+            <div class="page-content ">
+               <h1 style="color: goldenrod;"><%= project.projectName %></h1> 
+               <img src="<%= project.projectImageUrl %>" alt="page 1   ">
+            </div>
+            <div class="page-decription ">
+                <h2>About The Page </h2>
+                <p><%= project.projectDescription %></p>
+                <h2>Features</h2>
+                <p><%= project.projectDescription %></p>
+            </div>
+        </div>
+
+        <div class="page border">  
+            <div class="page-decription ">
+                <h2>About The Page </h2>
+                <p><%= project.projectDescription %></p>
+                <h2>Features</h2>
+                <p><%= project.projectDescription %></p>
+            </div>
+             <div class="page-content ">
+                <h1 style="color: goldenrod;"><%= project.projectName %></h1> 
+                <img src="<%= project.projectImageUrl %>" alt="ifj;sldjj">
+             </div>
+        </div>
+
+    </div>
+
+       
+        <div class="skill-container" id="skill-section">
+            <div>
+                <h1>Tech Used </h1>
+            </div>
+            <div class="skill-list">
+                <ul class=" skill-list">
+                
+                    <li class="skill border"><i class="fa-brands fa-html5"></i>Html</li>
+                    <li class="skill border"><i class="fa-brands fa-css3-alt"></i>Css</li>
+                    <li class="skill border"><i class="fa-brands fa-js"></i>JavaScript</li>
+                    <li class="skill border"><i class="fa-solid fa-database"></i>Mongo DB</li>
+                    <li class="skill border"><i class="fa-brands fa-jsfiddle"></i>Express</li>
+                    <li class="skill border"><i class="fa-brands fa-node-js"></i>Node js</li>
+                    <li class="skill border"><i class="fa-brands fa-react"></i>React js</li>
+                 
+    
+                </ul>
+            </div>
+           
+
+        </div>
+   
+    
+</body>
