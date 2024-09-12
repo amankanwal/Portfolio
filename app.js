@@ -21,9 +21,7 @@ app.set("views" , path.join(__dirname , "views"))
 
 async function main() {
     try {
-        await mongoose.connect(process.env.MONGODB_URL, {
-           
-        });
+        await mongoose.connect( process.env.MONGODB_URL);
         console.log("Connected to MongoDB successfully.");
     } catch (err) {
         console.error("Error connecting to MongoDB:", err);
